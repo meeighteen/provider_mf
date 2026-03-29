@@ -1,18 +1,9 @@
 import { INotificationService } from "../types";
 
 export class EmailNotificationService implements INotificationService {
-  private static _instance: EmailNotificationService | null = null;
-
   private constructor(
     private readonly from: string = "noreply@app.com"
   ) {}
-
-  static getInstance(): EmailNotificationService {
-    if (!EmailNotificationService._instance) {
-      EmailNotificationService._instance = new EmailNotificationService();
-    }
-    return EmailNotificationService._instance;
-  }
 
   send(recipient: string, message: string): void {
     console.log(` [${this.from}] → ${recipient}: ${message}`);
