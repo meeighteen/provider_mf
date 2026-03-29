@@ -1,0 +1,24 @@
+{
+  "name": "provider",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild dev --open",
+    "preview": "rsbuild preview",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@module-federation/rsbuild-plugin": "^2.1.0",
+    "@playwright/test": "^1.58.2",
+    "@rsbuild/core": "^1.7.1",
+    "@rsbuild/plugin-react": "^1.4.2",
+    "@types/node": "^25.5.0"
+  }
+}
